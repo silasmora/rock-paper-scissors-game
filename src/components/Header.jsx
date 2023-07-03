@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Header = () => {
+const Header = ({userScore}) => {
   return (
     <div className='mt-12 flex justify-between border-2 border-header rounded-lg uppercase py-2 px-3 w-4/5 max-w-screen-md'>
 
@@ -12,7 +12,7 @@ const Header = () => {
 
       <div className='flex flex-col justify-center items-center bg-white rounded-md py-2 px-5 md:px-8'>
         <span className='text-sm tracking tracking-wide opacity-75'>score</span>
-        <span className='text-4xl leading-none opacity-75 md:text-5xl'>23</span>
+        <span className='text-4xl leading-none opacity-75 md:text-5xl'>{userScore}</span>
       </div>
     </div>
   )

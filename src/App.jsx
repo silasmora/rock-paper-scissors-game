@@ -7,27 +7,26 @@ import Step2 from "./components/Step2"
 
 function App() {
 
+  const [userScore, setUserScore] = useState(0)
   const [isModal, setIsModal] = useState(false)
   const [playerSelection, setPlayerSelection] = useState(null)
   const [computerSelection, setComputerSelection] = useState(null)
-  console.log(`Player picked: ${playerSelection}`)
-  console.log(`Compuer picked: ${computerSelection}`)
 
   return (
     <div className='flex flex-col items-center h-screen justify-between'>
-      <Header />
+      <Header userScore={userScore}/>
 
-      {!playerSelection && 
-        <Step1 
+      {<Step1 
           playerSelection={playerSelection} setPlayerSelection={setPlayerSelection}/>}
 
       {playerSelection && 
         <Step2 
           playerSelection={playerSelection}
+          setPlayerSelection={setPlayerSelection}
           computerSelection={computerSelection}
           setComputerSelection={setComputerSelection}
+          setUserScore={setUserScore}
           />}
-
 
       <Footer setIsModal={setIsModal} isModal={isModal}/>
 

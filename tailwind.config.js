@@ -30,6 +30,11 @@ export default {
         bold: 600,
         bolder: 700,
       },
+      boxShadow: {
+        faintWhite: '0 0 30px 30px rgba(255, 255, 255, 0.1), 0 0 30px 30px rgba(255, 255, 255, 0.1)'
+
+
+      }
     },
   },
   plugins: [],
